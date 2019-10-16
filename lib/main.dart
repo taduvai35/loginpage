@@ -30,11 +30,25 @@ class _State extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Color.fromRGBO(32, 32, 200, 0.8),
       body: Center(
-        child: Text(
-          'neon',
-          style: TextStyle(fontSize: 36, color: Colors.white),
+        child:
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'neon',
+              style: TextStyle(
+                fontFamily: 'Schyler-Regular',
+                fontSize: 96, color: Colors.white),
+            ),
+             Text(
+              'TRAVEL PARTNER',
+              
+              style: TextStyle(
+                fontSize: 16, color: Colors.white),
+            ),
+          ],
         ),
       ),
     );
