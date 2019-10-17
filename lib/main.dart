@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:splash_screen/const/color_const.dart' as prefix0;
 import './screens/homepage.dart';
 import 'dart:async';
+import 'const/color_const.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -30,26 +32,33 @@ class _State extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(32, 32, 200, 0.8),
-      body: Center(
-        child:
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
+      backgroundColor: Colors.indigo[900],
+      // backgroundColor:Colors.blue[900],
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            alignment: Alignment.center,
+            child: Text(
               'neon',
               style: TextStyle(
-                fontFamily: 'Schyler-Regular',
-                fontSize: 96, color: Colors.white),
+                  fontFamily: 'AlfaSlabOne',
+                  fontSize: 96,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w100),
             ),
-             Text(
+          ),
+          SizedBox(
+
+          ),
+          Container(
+            alignment: Alignment.topCenter,
+            child: Text(
               'TRAVEL PARTNER',
-              
-              style: TextStyle(
-                fontSize: 16, color: Colors.white),
+              style: TextStyle(fontSize: 16, color: Colors.white),
             ),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
