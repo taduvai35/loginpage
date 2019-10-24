@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:splash_screen/screens/message.dart';
 import './register.dart';
 import 'package:splash_screen/database/dbHelper.dart';
-// import 'package:sqflite/sqflite.dart';
+import 'package:sqflite/sqflite.dart';
 import 'dart:async';
 import 'package:toast/toast.dart';
 
@@ -110,13 +110,16 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   width: double.infinity,
                   height: 70,
+                  
                   padding: EdgeInsets.only(left: 16, top: 16),
                   margin: EdgeInsets.only(left: 8, right: 22),
                   child: TextField(
                     controller: loginPassword,
+                    obscureText: true,
                     decoration: InputDecoration(
                         fillColor: Colors.grey[200],
                         filled: true,
+
                         border: OutlineInputBorder(
                           borderSide:
                               BorderSide(color: Colors.grey[200], width: 5),

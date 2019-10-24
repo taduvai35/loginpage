@@ -4,7 +4,7 @@ import 'package:splash_screen/models/UserModal.dart';
 import 'package:splash_screen/screens/message.dart';
 // import 'package:sqflite/sqflite.dart';
 import 'package:splash_screen/screens/homepage.dart';
-// import 'package:toast/toast.dart';
+import 'package:toast/toast.dart';
 
 void main() {
   runApp(RegisterPage());
@@ -140,11 +140,6 @@ class _State extends State<RegisterPage> {
                   hintText: 'Password'),
             ),
           ),
-          // Container(
-          //   width: double.infinity,
-          //   height: 50,
-          //   margin: EdgeInsets.only(left: 16, right: 16, top: 32),
-
           Container(
             margin: EdgeInsets.only(top: 56, left: 28, right: 28),
             child: ButtonTheme(
@@ -165,15 +160,12 @@ class _State extends State<RegisterPage> {
                   var s3 = passController.text;
 
                   db.insert(new User(s1, s2, s3).toMap()).then((id) async {
-                    // if (id > 0)
-                    //  {
-                    //   Toast.show("Data Inserted Successful", context,
-                    //       duration: Toast.LENGTH_SHORT, gravity: Toast.BOTTOM);
-                    // } else
-                    //  {
-                    //   Toast.show("Insertion Failed", context,
-                    //       duration: Toast.LENGTH_SHORT, gravity: Toast.BOTTOM);
-                    // }
+                    if (id > 0)
+                     {
+                      Toast.show("Data Inserted Successful", context,
+                          duration: Toast.LENGTH_SHORT, gravity: Toast.BOTTOM);
+                    }
+                    
                   });
                 },
               ),

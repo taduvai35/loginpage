@@ -33,7 +33,6 @@ class _State extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.indigo[900],
-      // backgroundColor:Colors.blue[900],
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

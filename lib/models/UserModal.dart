@@ -17,12 +17,14 @@ class User {
     this.id = id;
   }
 
+//getter methods
+
   int get getId => id;
   String get getName => name;
   String get getEmail => email;
   String get getPass => pass;
 
-  Map<String, dynamic> toMap() {
+ Map<String, dynamic> toMap() {
     var map = <String, dynamic>{
       "name": this.name,
       "email": this.email,
